@@ -1,0 +1,32 @@
+<section id="about" class="about-section py-5">
+  <div class="container">
+
+    <div class="row mb-5">
+      <div class="col-12 text-center">
+        <p class="text-uppercase text-muted mb-2 letter-spacing">{{ sectionTitle }}</p>
+        <h2 class="display-6 fw-bold">{{ mainHeading }}</h2>
+      </div>
+    </div>
+
+    <div class="row mb-5">
+      <div class="col-lg-8 mx-auto">
+        <p class="lead">
+          <strong>Hi I'm {{ name }}</strong> {{ introText }}
+        </p>
+        <p class="text-muted">{{ bodyText }}</p>
+      </div>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-lg-3 col-md-6" *ngFor="let service of services">
+        <div class="service-card text-center p-4" [style.border-bottom]="'3px solid ' + service.borderColor">
+          <div class="icon-wrapper mb-3">
+            <i [class]="service.icon + ' fa-3x'" [style.color]="service.iconColor"></i>
+          </div>
+          <h5 class="fw-bold">{{ service.title }}</h5>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>

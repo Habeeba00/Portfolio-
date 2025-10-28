@@ -1,0 +1,76 @@
+.experience{
+  color: #8f8888;
+  letter-spacing: 5px;
+  font-size: 0.7rem;
+  font-weight: 400;
+}
+.work{
+  letter-spacing: 5px;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+.timeline-container::before {
+  content: '';
+  position: absolute;
+  left: 29px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: #e9ecef;
+}
+
+/* Icon wrapper */
+.timeline-icon-wrapper {
+  flex-shrink: 0;
+  z-index: 10;
+}
+
+/* Icon circle */
+.timeline-icon {
+  width: 60px;
+  height: 60px;
+  font-size: 1.2rem;
+}
+
+.icon-blue {
+  background-color: #3b82f6;
+}
+
+.icon-red {
+  background-color: #ef4444;
+}
+
+.icon-yellow {
+  background-color: #f59e0b;
+}
+
+/* Letter spacing for header */
+.letter-spacing {
+  letter-spacing: 3px;
+}
+
+/* Card styling */
+.timeline-content .card {
+  transition: transform 0.2s ease;
+}
+
+.timeline-content .card:hover {
+  transform: translateY(-2px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .timeline-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 1rem;
+  }
+
+  .timeline-container::before {
+    left: 24px;
+  }
+
+  .timeline-content {
+    margin-left: 1rem !important;
+  }
+}
