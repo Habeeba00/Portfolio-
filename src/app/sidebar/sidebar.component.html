@@ -1,14 +1,19 @@
 <div class="sidebar bg-light p-3" style="min-height: 100vh;">
+  
   <div class="text-center mb-4">
     <img  [src]="profileImage" [alt]="username" width="100" height="100"  class="rounded-circle mb-3">
     <h5 class="fw-bold">{{username}}</h5>
     <span class="text-primary small">{{role}}</span>
     <span class="small text-muted ms-2">IN {{location}}</span>
-    <p>Home</p>
-    <p>About</p>
-    <p>Skills</p>
-    <p>Experience</p>
-    <p>Work</p>
+
+    <nav class="nav flex-column">
+    <a class="nav-link text-dark" routerLink="/home" routerLinkActive="text-primary">Home</a>
+    <a class="nav-link text-dark" routerLink="/about" routerLinkActive="text-primary">About</a>
+    <a class="nav-link text-dark" routerLink="/skills" routerLinkActive=" text-primary">Skills</a>
+    <a class="nav-link text-dark" routerLink="/experience" routerLinkActive=" text-primary">Experience</a>
+    <a class="nav-link text-dark" routerLink="/work" routerLinkActive=" text-primary">Work</a>
+    </nav>
+
   </div>
 </div>
 

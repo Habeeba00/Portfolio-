@@ -1,9 +1,39 @@
-.sidebar {
-  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+.nav-link {
+  padding: 0.5rem 1rem;
+  transition: color 0.3s ease;
+  text-decoration: none;
+  font-size: 0.875rem;
+  letter-spacing: 0.5px;
+  position: relative;
+  display: inline-block;
 }
 
-.sidebar img {
-  object-fit: cover;
-  border: 3px solid #fff;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 1.5px;
+  bottom: 0.3rem;
+  left: 50%;
+  background-color: #5B9BD5;
+  transition: width 0.3s ease, left 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.nav-link:hover::after {
+  width: 35%;
+  left: 50%;
+}
+
+.nav-link:hover {
+  color: #5B9BD5 !important;
+}
+
+.nav-link.active-link {
+  color: #5B9BD5 !important;
+  font-weight: 600;
+}
+
+.nav-link.active-link::after {
+  width: 0 !important;
 }
